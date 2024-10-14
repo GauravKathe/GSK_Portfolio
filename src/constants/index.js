@@ -5,7 +5,7 @@ import project4 from "../assets/projects/project-4.jpg";
 
 export const HERO_CONTENT = "I'm currently in my third year of pursuing a degree in Computer Science and Engineering, where I've developed a strong passion for software development and problem-solving. My technical toolkit includes proficiency in C/C++, Java, Python, SQL, and NoSQL, along with hands-on experience in full-stack development. I enjoy working on both front-end and back-end development, building complete and efficient web applications. My journey so far has been driven by curiosity and a constant desire to learn new technologies and improve my skills. I am excited to apply my knowledge in real-world projects and contribute to impactful and innovative solutions in the tech world.";
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = "I am currently a third-year student pursuing Computer Science and Engineering at D Y Patil College of Engineering, Akurdi, Pune. Previously, I completed my polytechnic studies in 'Inormation Technology' at RSM Polytechnic, Nashik. My journey in technology has been driven by curiosity and a relentless pursuit of knowledge. With a strong foundation in C/C++, Java, Pyhton , SQL, MongoDB, HTML, CSS, JS and React, I specialize in full-stack development, proficient in both front-end and back-end technologies. I am passionate about solving complex problems through innovative and efficient solutions.I am eager to apply my skills to real-world projects and contribute to impactful advancements in the tech industry.";
 
 export const EXPERIENCES = [
   {
@@ -71,6 +71,6 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  phoneNo: "+91 8657218488 ",
+  email: "gauravkatheoff@gmail.com",
 };
