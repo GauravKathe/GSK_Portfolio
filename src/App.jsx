@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div className="relative min-h-screen">
-      <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
+      <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-teal-600 selection:text-neutral-50">
         {/* Background Gradient */}
         <div className="fixed top-0 -z-10 h-full w-full">
           <div
