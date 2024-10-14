@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Gloria+Hallelujah&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root{
   font-family: "Inconsolata", monospace;
 }
-/* Add this to your global CSS file or inside your component's CSS module */
-.font-custom {
-  font-family: "Gloria Hallelujah", cursive;
+/* index.css */
+/* scroll bar hiddeen */
+html, body {
+  scrollbar-width: none; /* For Firefox */
 }
+html::-webkit-scrollbar {
+  width: 0px;  /* For Chrome, Safari, Edge */
+}
+body {
+  overflow-y: scroll;  /* Enable scrolling */
+}
+
+
