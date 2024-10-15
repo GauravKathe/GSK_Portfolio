@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Technologie from "./components/Technologie";
+import Experience from "./components/Experience";
 
 const App = () => {
   useEffect(() => {
@@ -40,6 +41,7 @@ const App = () => {
           <Hero />
           <About />
           <Technologie/>
+          <Experience/>
         </div>
       </div>
     </div>
