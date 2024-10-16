@@ -17,7 +17,7 @@ const Resume = () => {
   return (
     <div className="border-b border-neutral-900 pb-4" style={{ textAlign: 'center' }}>
       <h1 className="my-20 text-center text-4xl">
-        Proj<span className="text-neutral-500">ects</span>
+        <span className="text-neutral-500"></span>
       </h1>
       <Button
         variant="contained"
@@ -41,7 +41,7 @@ const Resume = () => {
         onMouseEnter={() => setIsHovered(true)} // Set hover state to true on mouse enter
         onMouseLeave={() => setIsHovered(false)} // Reset hover state on mouse leave
       >
-        Resume
+        Download CV
       </Button>
     </div>
   );

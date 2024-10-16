@@ -1,34 +1,48 @@
-import React from 'react'
-import { EXPERIENCES } from '../constants'
-import { space } from 'postcss/lib/list'
+import React from 'react';
+import Tilt from 'react-parallax-tilt';
+import { EXPERIENCES } from '../constants';
 
-const Experience = () => {
-  return (
-    <div className="border-b border-neutral-900 pb-4">
-      <h1 className="my-20 text-center text-4xl">
-        Experi<span className="text-neutral-500">ences</span>
+const Experience = () => (
+  <>
+    {/* Centered title with minimal gap */}
+    <div className="title-container">
+      <h1 className="text-4xl title-3d title-animate">
+        Experi<span className="glow-text">ences</span>
       </h1>
-      <div>{EXPERIENCES.map((experiences,index) => (
-        <div key={index} className="mb-8 flex flex-wrap lg:justify-center" >
-          <div className='w-full lg:w-1/4'>
-            <p className='mb-2 text-sm text-neutral-400'>{experiences.year}</p>
-          </div>
-          <div className='w-full max-w-xl lg:w-3/4'>
-          <h5 className='mb-2 font-semibold '>
-            {experiences.role} - <span className='text-sm text-purple-400'>
-              {experiences.company}
-            </span>
-            </h5>
-            <p className='mb-4 text-neutral-400'>{experiences.description}</p>
-            {experiences.technologies.map((tech,index) => (
-              <span key={index} className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900'>{tech}</span>
-            ))}
-            </div>
-        </div>
-      ))}
-      </div>
     </div>
-  )
-}
 
-export default Experience
+    {/* Experience cards with reduced gap */}
+    <div className="experience-section">
+      {EXPERIENCES.map((experience, index) => (
+        <Tilt
+          key={index}
+          tiltMaxAngleX={15}
+          tiltMaxAngleY={15}
+          scale={1.05}
+          className="mb-4 flex flex-wrap lg:justify-center" // Further reduced bottom margin
+        >
+          <div className="w-full lg:w-1/4">
+            <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
+          </div>
+          <div className="w-full max-w-xl lg:w-3/4 p-4 gradient-bg">
+            <h5 className="mb-2 font-semibold teal-text">
+              {experience.role} -{' '}
+              <span className="text-sm teal-text">{experience.company}</span>
+            </h5>
+            <p className="mb-4 text-neutral-300">{experience.description}</p>
+            {experience.technologies.map((tech, techIndex) => (
+              <span
+                key={techIndex}
+                className="mr-2 mt-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium teal-text"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </Tilt>
+      ))}
+    </div>
+  </>
+);
+
+export default Experience;
