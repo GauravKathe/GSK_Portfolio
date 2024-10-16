@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Technologie from "./components/Technologie";
 import Experience from "./components/Experience";
+import Project from "./components/Project";
+import Resume from "./components/Resume";
 
 const App = () => {
   useEffect(() => {
@@ -42,6 +44,8 @@ const App = () => {
           <About />
           <Technologie/>
           <Experience/>
+          <Project/>
+          <Resume/>
         </div>
       </div>
     </div>

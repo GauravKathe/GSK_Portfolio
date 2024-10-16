@@ -9,42 +9,29 @@ export const ABOUT_TEXT = "I am currently a third-year student pursuing Computer
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    year: "July(2022) - Sep(2022)",
+    role: "Intern as Network Administrator",
+    company: "MeriTrac",
+    description: "Served as a server manager and network administrator during my internship at MeriTrac, successfully conducting the MHT-CET Exam. Led the daily management of CET servers, ensuring smooth operations throughout the examination period. Managed LAN and WAN administration, performing routine maintenance, troubleshooting, and providing ongoing support for network infrastructure.",
+    technologies: ["Computer Networks ", "Database Management"],
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    year: "June(2022) - Aug(2022)",
+    role: "Intern as Jr.Cloud Engineer",
+    company: "Vsys Pvt. Ltd",
+    description: "Trained in AWS cloud fundamentals and gained hands-on experience managing client services as a Junior AWS Cloud Engineer. Managed cloud-based resources, ensuring service reliability and optimal performance, while supporting clients with cloud solutions",
+    technologies: ["HTML", "CSS", "Vue.js", "AWS","Lambda","EC2 Instance","S3 Bucket"],
   },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
+  
 ];
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "HAWK EYE",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "Developed HAWK AI, a lightweight, palm-sized quadcopter using AI/ML for object tracking. Integrated with an in-built camera, it provides a live feed via Wi-Fi to a mobile app, offering multiple tracking modes. Utilized Drone tech, 3D Printing, Android Development, and AI/ML.",
+    technologies: ["Android","Java","Python","IOT","SQL","Image Processign Algorithms"],
   },
   {
     title: "Task Management App",
@@ -53,20 +40,7 @@ export const PROJECTS = [
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
     technologies: ["HTML", "CSS", "Angular", "Firebase"],
   },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-  },
+  
 ];
 
 export const CONTACT = {
