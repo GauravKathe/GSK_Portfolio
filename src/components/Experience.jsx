@@ -25,15 +25,15 @@ const Experience = () => (
             <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
           </div>
           <div className="w-full max-w-xl lg:w-3/4 p-4 gradient-bg">
-            <h5 className="mb-2 font-semibold teal-text">
+            <h5 className="mb-2 font-semibold text-white">
               {experience.role} -{' '}
-              <span className="text-sm teal-text">{experience.company}</span>
+              <span className="text-sm text-gray-300">{experience.company}</span>
             </h5>
             <p className="mb-4 text-neutral-300">{experience.description}</p>
             {experience.technologies.map((tech, techIndex) => (
               <span
                 key={techIndex}
-                className="mr-2 mt-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium teal-text"
+                className="mr-2 mt-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-gray-300"
               >
                 {tech}
               </span>
