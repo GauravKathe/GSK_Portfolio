@@ -103,3 +103,34 @@ body {
   border-radius: 10px; /* Optional: Add some rounded corners */
   padding: 20px; /* Optional: Add some padding */
 }
+
+/* app.jsx file */
+/* App.css */
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-icon.active {
+  background-color: black;
+}
+
+.nav-icon svg {
+  color: #e0e0e0;
+}
+
+.nav-icon.active svg {
+  color: white;
+}
+
+.fixed {
+  position: fixed;
+}
+

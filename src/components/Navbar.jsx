@@ -3,6 +3,7 @@ import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import {SiGeeksforgeeks } from 'react-icons/si';
+
 const Navbar = () => {
   const handleLogoClick=() =>{
     window.location.reload();
