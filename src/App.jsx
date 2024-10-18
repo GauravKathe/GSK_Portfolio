@@ -3,7 +3,6 @@ import {
   AiOutlineHome,
   AiOutlineBook,
   AiOutlineBulb,
-  AiOutlineUser,
   AiOutlineMail,
 } from "react-icons/ai";
 
@@ -21,6 +20,12 @@ const App = () => {
   const handleIconClick = (icon) => {
     setActive(icon);
     console.log(`Navigated to ${icon}`);
+
+    const sectionId = `${icon}-section`;
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   useEffect(() => {
@@ -49,17 +54,24 @@ const App = () => {
           ></div>
         </div>
 
-        <div className="container mx-auto px-8">
+        {/* Sections with IDs for scrolling */}
+        <div id="home-section" className="container mx-auto px-8">
           <Navbar />
           <Hero />
+        </div>
+        <div id="book-section" className="container mx-auto px-8">
           <About />
+        </div>
+        <div id="bulb-section" className="container mx-auto px-8">
           <Technologie />
           <Experience />
+        </div>
+        <div id="contact-section" className="container mx-auto px-8">
           <Project />
           <Resume />
         </div>
 
-        {/* Smaller Vertical Navigation Bar */}
+        {/* Vertical Navigation Bar */}
         <div className="fixed top-1/2 left-2 -translate-y-1/2 bg-neutral-800 rounded-full p-3 flex flex-col gap-4 shadow-lg">
           <div
             className={`nav-icon ${active === "home" ? "active" : ""}`}
