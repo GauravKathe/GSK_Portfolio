@@ -13,6 +13,7 @@ import Technologie from "./components/Technologie";
 import Experience from "./components/Experience";
 import Project from "./components/Project";
 import Resume from "./components/Resume";
+import Contact from "./components/Contact";
 
 const App = () => {
   const [active, setActive] = useState("home");
@@ -65,10 +66,11 @@ const App = () => {
         <div id="bulb-section" className="container mx-auto px-8">
           <Technologie />
           <Experience />
+          <Project />
         </div>
         <div id="contact-section" className="container mx-auto px-8">
-          <Project />
           <Resume />
+          <Contact/>
         </div>
 
         {/* Vertical Navigation Bar */}
