@@ -134,3 +134,43 @@ body {
   position: fixed;
 }
 
+/* Styling for the technology cards */
+.technology-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;  /* Reduced size */
+  height: 80px; /* Reduced size */
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Pseudo-element to create the glowing border effect */
+.technology-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Border glow on hover */
+.technology-card:hover::before {
+  border-color: cyan;
+  box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+/* Icon styling */
+.technology-card svg {
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+/* Slight zoom on icon hover */
+.technology-card:hover svg {
+  transform: scale(1.05); /* Minimal zoom */
+}
+

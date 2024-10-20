@@ -3,15 +3,15 @@ import { Button } from '@mui/material'; // Material UI Button
 import DownloadIcon from '@mui/icons-material/Download'; // Download Icon
 
 const Resume = () => {
-  const [isHovered, setIsHovered] = useState(false); // State to track hover status
+  const [isHovered, setIsHovered] = useState(false); // Track hover state
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/GSK RESUME.pdf'; // Path to PDF in the public folder
+    link.href = '/GSK RESUME.pdf'; // Path to PDF
     link.setAttribute('download', 'GSK RESUME.pdf'); // Set download filename
-    document.body.appendChild(link); // Append link to the DOM
-    link.click(); // Trigger the click
-    document.body.removeChild(link); // Cleanup the DOM
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); // Cleanup
   };
 
   return (
@@ -24,22 +24,26 @@ const Resume = () => {
         onClick={handleDownload}
         startIcon={<DownloadIcon />}
         style={{
-          background: isHovered ? 'linear-gradient(to right, #2196f3, #9c27b0)' : '#d1c4e9', // Gradient on hover, light purple before hover
-          color: 'white', // White text
+          background: isHovered 
+            ? 'linear-gradient(to right, #2196f3, #9c27b0)' // Hover state: Blue to Purple
+            : 'linear-gradient(to right, #9575cd, #5c6bc0)', // Default: Darker Purple to Blue
+          color: 'white',
           padding: '12px 28px',
           fontSize: '18px',
-          borderRadius: '25px', // Rounded corners
-          textTransform: 'none', // Keep text in normal case
+          borderRadius: '25px',
+          textTransform: 'none',
           fontWeight: 'bold',
-          boxShadow: isHovered ? '0px 6px 15px rgba(0, 0, 0, 0.3)' : '0px 4px 10px rgba(0, 0, 0, 0.2)', // Shadow change on hover
-          transition: 'all 0.3s ease-in-out', // Smooth transition on hover
+          boxShadow: isHovered 
+            ? '0px 6px 15px rgba(0, 0, 0, 0.3)' 
+            : '0px 4px 12px rgba(0, 0, 0, 0.2)', // Adjust shadow on hover out
+          transition: 'all 0.3s ease-in-out',
           display: 'inline-flex',
           alignItems: 'center',
           justifyContent: 'center',
           cursor: 'pointer',
         }}
-        onMouseEnter={() => setIsHovered(true)} // Set hover state to true on mouse enter
-        onMouseLeave={() => setIsHovered(false)} // Reset hover state on mouse leave
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         Download CV
       </Button>
