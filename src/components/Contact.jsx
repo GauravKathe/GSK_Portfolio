@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '',
+    from_email: '',
     message: '',
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,13 +21,26 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    setIsSubmitted(true); // You can integrate an API call here
+
+    // EmailJS integration
+    emailjs
+      .send('service_vv12fwj', 'template_z5046gf', formData, 'hHP_oxY_dMYMU_S0L')
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setIsSubmitted(true);
+          setError('');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setError('Failed to send the message. Please try again later.');
+        },
+      );
 
     // Reset form after submission
     setFormData({
-      name: '',
-      email: '',
+      from_name: '',
+      from_email: '',
       message: '',
     });
   };
@@ -47,8 +62,8 @@ const Contact = () => {
             <input
               type="text"
               id="name"
-              name="name"
-              value={formData.name}
+              name="from_name"
+              value={formData.from_name}
               onChange={handleChange}
               required
               placeholder="Enter your name"
@@ -64,8 +79,8 @@ const Contact = () => {
             <input
               type="email"
               id="email"
-              name="email"
-              value={formData.email}
+              name="from_email"
+              value={formData.from_email}
               onChange={handleChange}
               required
               placeholder="Enter your email"
@@ -90,6 +105,9 @@ const Contact = () => {
             />
           </div>
 
+          {/* Error Message */}
+          {error && <p className="text-red-500">{error}</p>}
+
           {/* Submit Button */}
           <button
             type="submit"
@@ -104,6 +122,14 @@ const Contact = () => {
           <p>We will get back to you shortly.</p>
         </div>
       )}
+
+      {/* Copyright Section with Email */}
+      <div className="text-center text-neutral-400 mt-10">
+        <p>&copy; {new Date().getFullYear()} Gaurav Kathe. All rights reserved.</p>
+        <p>
+          Contact: <a href="mailto:gauravkatheoff@gmail.com" className="text-teal-500 underline">gauravkatheoff@gmail.com</a>
+        </p>
+      </div>
     </div>
   );
 };
