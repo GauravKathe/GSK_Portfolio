@@ -17,7 +17,6 @@ import Contact from "./components/Contact";
 
 const App = () => {
   const [active, setActive] = useState("home");
-
   const handleIconClick = (icon) => {
     setActive(icon);
     console.log(`Navigated to ${icon}`);
@@ -28,21 +27,6 @@ const App = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  useEffect(() => {
-    window.embeddedChatbotConfig = {
-      chatbotId: "JnqlXrUnlSBJY_ngfMW-8",
-      domain: "www.chatbase.co",
-    };
-
-    const script = document.createElement("script");
-    script.src = "https://www.chatbase.co/embed.min.js";
-    script.setAttribute("chatbotId", "JnqlXrUnlSBJY_ngfMW-8");
-    script.setAttribute("domain", "www.chatbase.co");
-    script.defer = true;
-
-    document.body.appendChild(script);
-  }, []);
 
   return (
     <div className="relative min-h-screen">
@@ -70,7 +54,7 @@ const App = () => {
         </div>
         <div id="contact-section" className="container mx-auto px-8">
           <Resume />
-          <Contact/>
+          <Contact />
         </div>
 
         {/* Vertical Navigation Bar */}
