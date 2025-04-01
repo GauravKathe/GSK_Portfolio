@@ -7,8 +7,8 @@ const Resume = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/GSK RESUME.pdf'; // Path to PDF
-    link.setAttribute('download', 'GSK RESUME.pdf'); // Set download filename
+    link.href = '/gaurav_resume.pdf'; // Path to PDF
+    link.setAttribute('download', 'gaurav_resume.pdf'); // Set download filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link); // Cleanup

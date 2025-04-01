@@ -1,5 +1,5 @@
 import { HERO_CONTENT } from "../constants";
-import temp from "../assets/temppp.png";
+import temp from "../assets/ghibli.png";
 const Hero = () => {
   return (
     <div className="border-b border-neutral-900 pb-4 lg:mb-35">
@@ -19,11 +19,11 @@ const Hero = () => {
 
                     <span className="mt-[1em] bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 
                     bg-clip-text text-3xl tracking-tight text-transparent">
-                      Full Stack Developer
+                      Android Developer
                     </span>
 
                     {/* Paragraph Section */}
-                    <p className="my-2 max-w-xl py-6 font-light tracking-tighter text-justify">
+                    <p className="my-2 max-w-xl py-6 font-light tracking-tighter text-justify font-lets">
                       {HERO_CONTENT}
                     </p>
                 </div>

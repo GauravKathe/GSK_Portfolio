@@ -18,7 +18,7 @@ const About = () => {
         {/* Text Section */}
         <div className="lg:w-1/2 p-4">
           <div className="flex items-center justify-center h-full">
-            <p className="text-justify my-2 max-w-xl py-6">
+            <p className="text-justify my-2 max-w-xl py-6 font-lets">
               {ABOUT_TEXT}
             </p>
           </div>

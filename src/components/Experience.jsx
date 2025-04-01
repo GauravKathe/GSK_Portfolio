@@ -19,21 +19,25 @@ const Experience = () => (
           tiltMaxAngleX={15}
           tiltMaxAngleY={15}
           scale={1.05}
-          className="mb-4 flex flex-wrap lg:justify-center" // Further reduced bottom margin
+          className="mb-4 flex flex-wrap lg:justify-center"
         >
           <div className="w-full lg:w-1/4">
-            <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
+            <p className="mb-2 text-sm text-neutral-400 font-lets">
+              {experience.year}
+            </p>
           </div>
           <div className="w-full max-w-xl lg:w-3/4 p-4 gradient-bg">
-            <h5 className="mb-2 font-semibold text-white">
+            <h5 className="mb-2 font-semibold text-white font-lets">
               {experience.role} -{' '}
               <span className="text-sm text-gray-300">{experience.company}</span>
             </h5>
-            <p className="mb-4 text-neutral-300">{experience.description}</p>
+            <p className="mb-4 text-neutral-300 font-lets">
+              {experience.description}
+            </p>
             {experience.technologies.map((tech, techIndex) => (
               <span
                 key={techIndex}
-                className="mr-2 mt-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-gray-300"
+                className="mr-2 mt-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-gray-300 font-lets"
               >
                 {tech}
               </span>
