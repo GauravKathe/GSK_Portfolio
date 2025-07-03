@@ -1,7 +1,6 @@
 import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project3 from "../assets/projects/project-3.png";
 
 export const HERO_CONTENT = "I am passionate about engineering software solutions, having proficiency in many domains, including full-stack web development in Android applications. My skills include a full range of languages such as C/C++, Java, Dart, Python, SQL, NoSQL, and Firebase both for the front and back ends, and creating seamless applications. My experience also includes cloud platforms like AWS, as well as frameworks such as React, Node.js, and Spring Boot. Constantly looking for new challenges, I am eager to apply this knowledge in projects that are meaningful and advance the frontier of innovation.";
 
@@ -31,7 +30,7 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "HAWK EYE",
+    title: "HAWK AI",
     image: project1,
     description:
       "Developed HAWK AI, a lightweight, palm-sized quadcopter using AI/ML for object tracking. Integrated with an in-built camera, it provides a live feed via Wi-Fi to a mobile app, offering multiple tracking modes. Utilized Drone tech, 3D Printing, Android Development, and AI/ML.",
@@ -48,6 +47,18 @@ export const PROJECTS = [
     ],
     technologies: ["Flutter", "Firebase", "Cloud Functions", "Firestore"],
   },
+  {
+    title:"Mousiki (Spotify Clone)",
+    image: project3,
+    description:[
+      "Developed a full-stack music streaming platform with admin dashboard for song management via MongoDB.", 
+      "Implemented Clerk authentication for secure user access and Cloudinary integration for media storage.",
+      "Added real-time features including live chat and active listener tracking visible to admin.",
+      "Designed responsive UI with modern player controls, playlists, and seamless audio streaming.",
+      "Optimized performance through efficient state management and API caching strategies.",
+    ],
+    technologies: [" React","Node.js" ,"MongoDB","Cloudinary","Clerk"],
+  }
   
 ];
 
